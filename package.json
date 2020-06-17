@@ -1,0 +1,16 @@
+{
+  "name": "easybank-landing-page-master",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/yudi7ll/easybank-landing-page",
+  "author": "Yudi <madewahyudi22@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass ./assets/scss/app.scss ./assets/css/app.css",
+    "sass:watch": "yarn run sass --watch"
+  },
+
+  "devDependencies": {
+    "sass": "^1.26.8"
+  }
+}

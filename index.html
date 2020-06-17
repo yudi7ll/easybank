@@ -8,22 +8,35 @@
   
   <title>Frontend Mentor | Easybank landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- styles -->
+  <link rel="stylesheet" href="/assets/css/app.css" type="text/css" charset="utf-8" />
+  <!-- script -->
+  <script defer src="/assets/script.js"></script>
 </head>
 <body>
-
-  Home
-  About
-  Contact
-  Blog
-  Careers
-
-  Request Invite
-
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="/">
+          <img src="./images/logo.svg" alt="easybank logo" />
+        </a>
+      </div>
+      <div id="menu" class="menu">
+        <button id="menu-btn" class="menu__btn">
+          <div class="menu__bar"></div>
+          <div class="menu__bar"></div>
+          <div class="menu__bar"></div>
+        </button>
+        <nav id="menu-link" class="menu__link">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </nav>
+      </div>
+    </header>
+  </div>
 
 
   Next generation digital banking
@@ -56,7 +69,7 @@
   Manage your savings, investments, pension, and much more from one account. Tracking 
   your money has never been easier.
 
-  
+
 
   Latest Articles
 
@@ -80,7 +93,7 @@
   After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
   It’s easy to request an invite through the site ...
 
-  
+
 
   About Us
   Contact
@@ -92,10 +105,5 @@
   Request Invite
 
   © Easybank. All Rights Reserved
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/yudi7ll">Yudi</a>.
-  </div>
 </body>
 </html>
