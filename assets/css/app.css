@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
-.d-none {
-  display: none;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -22,15 +18,30 @@ body {
   max-width: 1024px;
 }
 
+.btn {
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  border: none;
+  border-radius: 35px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.7rem 1.6rem;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
 header {
+  align-items: center;
   background-color: white;
   display: flex;
+  justify-content: space-between;
   padding: 1.5rem;
   position: relative;
   z-index: 99;
 }
-header .brand {
-  flex-grow: 1;
+header .invite-btn {
+  display: none;
 }
 header .menu__btn {
   background: none;
@@ -38,26 +49,16 @@ header .menu__btn {
   cursor: pointer;
   display: block;
 }
-header .menu__link {
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0px 5rem 30rem black;
-  display: none;
-  padding: 1rem;
-  position: absolute;
-  top: 5rem;
-  left: 1rem;
-  right: 1rem;
-}
-header .menu__link > a {
+header .menu__link a {
   color: #333;
   display: block;
   margin: 1rem auto;
+  padding: 0px 0.5rem;
   text-align: center;
   text-decoration: none;
 }
-header .menu__link > a:hover {
-  font-weight: bold;
+header .menu__link a:hover {
+  color: #000;
 }
 header .menu__bar {
   background-color: #555;
@@ -91,6 +92,34 @@ header .active .menu__link {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .menu__link {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 5rem 30rem black;
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+    right: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header {
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .menu__btn {
+    display: none;
+  }
+  header .menu__link {
+    display: flex;
+  }
+  header .invite-btn {
+    display: block;
   }
 }
 

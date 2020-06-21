@@ -1,12 +1,14 @@
 header {
+  align-items: center;
   background-color: $white;
   display: flex;
+  justify-content: space-between;
   padding: 1.5rem;
   position: relative;
   z-index: 99;
 
-  .brand {
-    flex-grow: 1;
+  .invite-btn {
+    display: none;
   }
 
   .menu {
@@ -17,27 +19,16 @@ header {
       display: block;
     }
 
-    &__link {
-      background-color: $white;
-      border-radius: 4px;
-      box-shadow: 0px 5rem 30rem rgba($color: #000000, $alpha: 1.0);
-      display: none;
-      padding: 1rem;
-      position: absolute;
-      top: 5rem;
-      left: 1rem;
-      right: 1rem;
+    &__link a {
+      color: #333;
+      display: block;
+      margin: 1rem auto;
+      padding: 0px .5rem;
+      text-align: center;
+      text-decoration: none;
 
-      &>a {
-        color: #333;
-        display: block;
-        margin: 1rem auto;
-        text-align: center;
-        text-decoration: none;
-
-        &:hover {
-          font-weight: bold;
-        }
+      &:hover {
+        color: #000;
       }
     }
 
@@ -83,6 +74,39 @@ header {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .menu__link {
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0px 5rem 30rem rgba($color: #000000, $alpha: 1.0);
+      display: none;
+      padding: 1rem;
+      position: absolute;
+      top: 5rem;
+      left: 1rem;
+      right: 1rem;
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) {
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      &__btn {
+        display: none;
+      }
+
+      &__link {
+        display: flex;
+      }
+    }
+    .invite-btn {
+      display: block;
     }
   }
 }

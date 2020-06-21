@@ -6,12 +6,13 @@
   "author": "Yudi <madewahyudi22@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "npm run sass:watch",
+    "dev": "live-server & npm run sass:watch",
     "sass": "sass ./assets/scss/app.scss ./assets/css/app.css",
-    "sass:watch": "npm run sass -- --watch"
+    "sass:watch": "npm run sass -- --watch",
+    "server": "live-server"
   },
-
   "devDependencies": {
+    "live-server": "^1.2.1",
     "sass": "^1.26.8"
   }
 }
