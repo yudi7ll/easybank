@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1124px;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  background-image: linear-gradient(to right, $primary-green, $primary-cyan);
+  border: none;
+  border-radius: 35px;
+  color: $white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: .8rem 1.8rem;
+
+  &:hover {
+    opacity: .7;
+  }
+}

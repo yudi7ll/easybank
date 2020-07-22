@@ -1,0 +1,22 @@
+{
+  "name": "easybank",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/yudi7ll/easybank",
+  "homepage": "https://yudi7ll.github.io/easybank",
+  "author": "Yudi <madewahyudi22@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "live-server --host=0.0.0.0 & npm run sass:watch",
+    "sass": "sass ./assets/scss/app.scss ./assets/css/app.css",
+    "sass:watch": "npm run sass -- --watch",
+    "server": "live-server",
+    "predeploy": "npm run sass",
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "live-server": "^1.2.1",
+    "sass": "^1.26.8"
+  }
+}
