@@ -1,0 +1,59 @@
+footer {
+  background-color: $primary-blue;
+  color: $light;
+  text-align: center;
+  padding: 3rem 0;
+
+  .logo {
+    padding-bottom: 2rem;
+
+    img {
+      width: 110px;
+    }
+  }
+
+  .sosmed {
+    a {
+      padding: 5px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li a {
+      color: $light;
+      display: block;
+      font-size: .8em;
+      padding: .5rem 1rem;
+      text-decoration: none;
+    }
+  }
+
+  .copyright {
+    color: $gray;
+    font-size: .8em;
+    padding-top: 1.5rem;
+  }
+
+  @media only screen and (min-width: 980px) {
+    .flex {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 20% auto auto;
+      column-gap: 1rem;
+
+      ul {
+        display: flex;
+
+        span {
+          margin: 0 2rem;
+        }
+      }
+
+      .text-left { text-align: left; }
+      .text-right { text-align: right; }
+    }
+  }
+}
