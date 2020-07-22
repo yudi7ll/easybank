@@ -31,6 +31,7 @@ header {
         top: 5rem;
         left: 1rem;
         right: 1rem;
+        z-index: 999;
       }
     }
 
@@ -62,7 +63,6 @@ header {
   }
 
   .active .menu {
-
     &__bar {
       &:first-child {
         transform: translateY(5px) rotate(45deg)
@@ -75,9 +75,11 @@ header {
       }
     }
 
-    &__link {
-      display: block;
-      animation: reveal-menu .2s ease-in-out forwards;
+    @media only screen and (max-width: 767px) {
+      &__link {
+        display: block;
+        animation: reveal-menu .2s ease-in-out forwards;
+      }
     }
 
     @keyframes reveal-menu {
@@ -96,6 +98,7 @@ header {
   @media only screen and (min-width: 768px) {
     align-items: center;
     justify-content: space-between;
+    padding: 0 1.5rem;
 
     .menu {
       &__btn {
@@ -106,12 +109,18 @@ header {
         display: flex;
 
         & a {
-          border-bottom: 4px solid transparent;
+          align-self: center;
+          border-color: transparent;
+          border-style: solid;
+          border-width: 4px 0px;
           color: $gray;
+          display: block;
           font-size: 14px;
+          padding: 1.5rem 1rem;
 
           &:hover {
             border-bottom: 4px solid $primary-green;
+            transition: .2s;
           }
 
         }
