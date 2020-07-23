@@ -21,17 +21,21 @@ header {
 
     // mobile only
     @media only screen and (max-width: 767px) {
+      &__close {
+        display: none;
+      }
+
       &__link {
         background-color: $white;
         border-radius: 4px;
-        box-shadow: 0px 5rem 30rem rgba($color: #000000, $alpha: 1.0);
+        box-shadow: 0 4rem 5rem rgba($color: #000000, $alpha: .5);
         display: none;
         padding: 1rem;
         position: absolute;
-        top: 5rem;
+        top: 5.5rem;
         left: 1rem;
         right: 1rem;
-        z-index: 999;
+        z-index: 99;
       }
     }
 
@@ -47,35 +51,13 @@ header {
         color: #000;
       }
     }
-
-    &__bar {
-      background-color: #555;
-      border-radius: 8px;
-      height: 1px;
-      margin-bottom: 4px;
-      transition: .2s;
-      width: 24px;
-
-      &:last-child {
-        margin-bottom: 0px;
-      }
-    }
   }
 
   .active .menu {
-    &__bar {
-      &:first-child {
-        transform: translateY(5px) rotate(45deg)
-      }
-      &:nth-child(2) {
-        opacity: 0;
-      }
-      &:last-child {
-        transform: translateY(-5px) rotate(-45deg);
-      }
-    }
-
     @media only screen and (max-width: 767px) {
+      &__open { display: none; }
+      &__close { display: block; }
+
       &__link {
         display: block;
         animation: reveal-menu .2s ease-in-out forwards;
