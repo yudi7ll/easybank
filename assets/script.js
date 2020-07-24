@@ -7,4 +7,4 @@ function toggleActive() {
 }
 
 menuBtn.addEventListener('click', toggleActive);
-menuLink.addEventListener('click', () => setTimeout(toggleActive, 100));
+menuLink.addEventListener('click', toggleActive);
