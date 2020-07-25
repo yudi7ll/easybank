@@ -2,9 +2,6 @@
 
 [Demo](https://yudi7ll.github.io/easybank)
 
-### Environment
-- npm ^6
-
 ### Local Development
 
 ```
